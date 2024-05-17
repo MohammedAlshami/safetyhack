@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Lilita+One&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body {
+  font-family: 'Lita One', sans-serif;
+}
+
+
+.outline-title {
+     color: white;
+     text-shadow:
+        5px 4px 0 #000,
+       10px -1px 0 #000,  
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+         1px 1px 0 #000;
+  }
+
+  .text-stroke {
+    /* Prefix required. Even Firefox only supports the -webkit- prefix */
+    text-shadow:
+    2px 2px 0 #000,
+    1px -1px 0 #000,  
+    .1px -.1px 0 #000,
+    -.1px .1px 0 #000,
+    .1px .1px 0 #000;
+  }
