@@ -2,45 +2,7 @@
 import { useState, useEffect } from "react";
 import ReactPlayer from "react-player";
 import { YellowButton } from "../components/YellowButton";
-const actionsDict = {
-  start: {
-    videoUrl:
-      "https://firebasestorage.googleapis.com/v0/b/realtimedatabasetest-f226a.appspot.com/o/Scenes%2Fscene1%20(1).mp4?alt=media",
-    countdown: 10,
-    isCorrect: true,
-    actions: [
-      { label: "Runnnn", next: "scenario1" },
-      { label: "Inspect The Injury", next: "scenario1" },
-      { label: "Panic and cry", next: "scenario1" },
-    ],
-  },
-  scenario1: {
-    videoUrl:
-      "https://firebasestorage.googleapis.com/v0/b/realtimedatabasetest-f226a.appspot.com/o/Scenes%2FScene2.mp4?alt=media",
-    countdown: 15,
-    isCorrect: true,
-    actions: [
-      { label: "Bring The First Aid Kit", next: "scenario2" },
-      { label: "Run Away", next: "scenario2" },
-      { label: "End", next: "end" },
-    ],
-  },
-  scenario2: {
-    videoUrl:
-      "https://firebasestorage.googleapis.com/v0/b/realtimedatabasetest-f226a.appspot.com/o/Scenes%2FScene2_Wrong.mp4?alt=media",
-    countdown: 20,
-    isCorrect: false,
-    actions: [
-      { label: "Go to Scenario 4", next: "scenario4" },
-      { label: "End", next: "end" },
-    ],
-  },
-  end: {
-    videoUrl:
-      "https://firebasestorage.googleapis.com/v0/b/realtimedatabasetest-f226a.appspot.com/o/Zias%20Laughing%20Meme%20Template.mp4?alt=media",
-    actions: [],
-  },
-};
+import {actionsDict} from "./Scenarios";
 
 export default function Home() {
   const [currentScenario, setCurrentScenario] = useState("start");
